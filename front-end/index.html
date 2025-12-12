@@ -367,6 +367,7 @@
       .preview {
         font-size: 0.8em;
         height: 100%;
+        color: #fff;
       }
 
       .preview .content {
@@ -539,11 +540,12 @@
       #arrow-forward {
         color: black;
         cursor: pointer;
+        color: #fff;
       }
 
       #arrow-back[disabled],
       #arrow-forward[disabled] {
-        color: rgb(218, 215, 215);
+        color: #3c3c3c;
         cursor: initial;
       }
 
@@ -577,6 +579,7 @@
         font-size: 0.8em;
         overflow: scroll;
         color: #fff;
+        display: none;
       }
 
       .tree-node-wrapper {
@@ -598,7 +601,7 @@
         margin-left: 0.3em;
         white-space: nowrap;
       }
-
+      /*
       .right {
         position: absolute;
         width: 80%;
@@ -606,7 +609,11 @@
         margin-left: 20%;
         overflow: scroll;
       }
-
+      */
+      .right {
+        width: 100%;
+        height: 100%;
+      }
       .row {
         height: 2.5em;
         padding: 0 0.8em 0 1em;
@@ -623,6 +630,7 @@
 
       .row.file-wrapper i {
         min-width: 1em;
+        color: #fff;
       }
 
       .file {
@@ -644,7 +652,7 @@
       .list-header .name {
         display: flex;
         align-items: center;
-        width: 60%;
+        width: 56%;
         padding-left: 0;
       }
 
