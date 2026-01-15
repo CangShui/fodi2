@@ -34,7 +34,25 @@
           display: block;
           margin: 0 auto;
       }
+      .ad-wrapper {
+          /* 1. 核心约束：防止挤压 */
+          width: 100%;
+          max-width: 520px;       /* 匹配你原本 iframe 的宽度 */
+          margin: 10px auto;      /* 居中，并给予上下间距，不至于紧贴 */
+          
+          /* 2. 溢出锁定：即使 iframe 变大也不会撑破 div */
+          overflow: hidden;       
+          
+          /* 3. 盒模型修正 */
+          display: block;
+          clear: both;            /* 清除浮动带来的错位 */
+      }
 
+      .ad-wrapper iframe {
+          /* 4. 让 iframe 填满这个受控的 div */
+          width: 100%;
+          display: block;
+      }
       @media (max-width: 900px) {
           #tupianguangao {
               width: 520px;
@@ -2307,6 +2325,9 @@
             </div>
           </div>
           <div id="file-list"></div>
+          <div class="ad" >
+         <iframe id="tupianguangao" src="https://cangshui.net/-otherweb/otherlink301/ad.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true" data-hidden="1"></iframe>
+          </div>
           <div class="markdown-body">
             <div id="readme"></div>
           </div>
@@ -2351,8 +2372,6 @@
     <div id="back-to-top" data-hidden="1">
       <i class="zmdi zmdi-caret-up-circle"></i>
     </div>
-    <div class="ad" >
-    <iframe id="tupianguangao" src="https://cangshui.net/-otherweb/otherlink301/ad.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true" data-hidden="1"></iframe>
-    </div>
+
   </body>
 </html>
